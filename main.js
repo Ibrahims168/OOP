@@ -34,6 +34,21 @@ class User {
     }
 }
 
+class Teacher extends User{
+    constructor(){
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
 const u1 = new User ('Ibrahim','Sharif','22','@sharif','student','test123')
 u1.signIn()
 console.log(u1);
