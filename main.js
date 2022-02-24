@@ -86,6 +86,7 @@ const school = new School('america House')
 school.hireTecher('rami', 'nasr', 31, '@teach1', 'teacher', 'pas443', 'Arabic', '2000$')
 school.registerStudent('ashraf', 'Safadi', 19, '@user1', 'student', 'password', 5, '10th')
 
+console.log(school);
 
 const u1 = new User ('Ibrahim','Sharif',22,'@sharif','student','test123')
 const u2 = new Teacher ('rami', 'nasr', 31, '@teach1', 'teacher', 'pas443', 'Arabic', '2000$')
