@@ -12,6 +12,6 @@ class User {
 
 }
 
-const user = new User ('Ibrahim','Sharif','22','Isafadi','student','password123')
+const user = new User ('Ibrahim','Sharif','22','@sharif','student','test123')
 
 console.log(user);
