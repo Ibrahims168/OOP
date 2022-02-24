@@ -9,6 +9,7 @@ class User {
         this.isLoggedIn = false 
         this.lastLoggedIn = 0
         this.isActive = true
+        this._id = Date.now()
     }
     signIn(){
         if (this.isActive) {
@@ -34,9 +35,26 @@ class User {
     }
 }
 
+//--------------------adding a teacher ---------------------------
+
 class Teacher extends User{
-    constructor(){
-        
+
+    constructor(firstName, lastName, age, userName, type, password, subject, salary){
+        super(firstName,lastName,age,userName,type,password)
+        this.subject = subject
+        this.salary = salary
+        this.workHours = 0 
+    }
+    giveMark(){
+
+    }
+}
+
+class Student extends User {
+    constructor(firstName, lastName, age, userName, type, password, classNum ,grad){
+        super(firstName,lastName,age,userName,type,password)
+        this.classNum = classNum
+        this.grad = grad
     }
 }
 
@@ -50,5 +68,7 @@ class Teacher extends User{
 
 
 const u1 = new User ('Ibrahim','Sharif','22','@sharif','student','test123')
+const u1 = new Teacher ('ashraf','Safadi','19','@user1','student','password')
+const u1 = new Student ('ashraf','Safadi','19','@user1','student','password')
 u1.signIn()
 console.log(u1);
