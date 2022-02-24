@@ -50,6 +50,8 @@ class Teacher extends User{
     }
 }
 
+//-----------------addind a student--------------------------------
+
 class Student extends User {
     constructor(firstName, lastName, age, userName, type, password, classNum ,grad){
         super(firstName, lastName, age, userName, type, password)
@@ -59,11 +61,37 @@ class Student extends User {
 }
 
 
+//-------------------making school--------------------------------
 
+class School{
+    constructor(name){
+        this.name = name
+        this.grades = {}
+        this.teachers = []
+        this.students =[]
+    }
+    registerStudent(irstName, lastName, age, userName, type, password, classNum ,grad){
+    const student = new Student(irstName, lastName, age, userName, type, password, classNum ,grad) 
+    this.students.push(student)
+
+    }
+    hireTecher(firstName, lastName, age, userName, type, password, subject, salary){
+        const teacher = new Teacher(firstName, lastName, age, userName, type, password, subject, salary)
+        this.teachers.push(teacher)
+    }
+}
+
+const school = new School('america House')
+
+school.hireTecher('rami', 'nasr', 31, '@teach1', 'teacher', 'pas443', 'Arabic', '2000$')
+school.registerStudent('ashraf', 'Safadi', 19, '@user1', 'student', 'password', 5, '10th')
 
 
 const u1 = new User ('Ibrahim','Sharif',22,'@sharif','student','test123')
 const u2 = new Teacher ('rami', 'nasr', 31, '@teach1', 'teacher', 'pas443', 'Arabic', '2000$')
 const u3 = new Student ('ashraf', 'Safadi', 19, '@user1', 'student', 'password', 5, '10th')
+
+
+
 u1.signIn()
 console.log(u1);
