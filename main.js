@@ -96,3 +96,5 @@ const u3 = new Student ('ashraf', 'Safadi', 19, '@user1', 'student', 'password',
 
 u1.signIn()
 console.log(u1);
+
+//---
